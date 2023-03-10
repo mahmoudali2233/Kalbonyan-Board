@@ -1,0 +1,143 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #066d58;
+}
+
+.container {
+  margin-top: 6.2rem;
+  display: flex;
+  background-color: #009479;
+  height: fit-content;
+  width: 95%;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  text-align: left;
+  padding-bottom: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.column:not(:last-of-type) {
+  margin-right: 2.4rem;
+}
+
+.column h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.column.dragover {
+  border: 2px solid #03f8cb;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.task {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  height: 10px;
+  background-color: #066d58;
+}
+
+.input {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 1rem;
+  z-index: 1;
+  transition: all 0.2s ease-in;
+  font-size: 1.2rem;
+  border: none;
+  height: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  padding: 3px 0 0 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.task .input:focus {
+  outline: 2px solid #03f8cb;
+}
+
+span.icons {
+  padding-right: 5px;
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  cursor: pointer;
+}
+
+i.second {
+  padding-left: 5px;
+  color: red;
+}
+
+i.second:hover {
+  color: rgba(255, 0, 0, 0.37);
+}
+
+i.first:hover {
+  color: #333;
+}
+
+button {
+  width: 100%;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  height: 2rem;
+  background-color: #01866c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 3px;
+}
+
+button:hover {
+  background-color: #066d58;
+}
+
+span.del {
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  color: red;
+}
+
+span.del:hover {
+  color: rgba(255, 0, 0, 0.74);
+}
+
+@media (max-width: 65rem) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    width: 70%;
+  }
+  .column:not(:last-child) {
+    margin-right: 0;
+  }
+} ;
